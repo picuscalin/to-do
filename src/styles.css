@@ -1,0 +1,20 @@
+.container{
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 5fr;
+}
+.main-portion{
+    background-color: blue;
+}
+.sidebar{
+    background-color: silver;
+}
+.plus{
+background-color: rgb(61, 7, 7);
+color: white;
+ border-radius: 20px;
+ width: 50px;
+ height: 40px;
+}
