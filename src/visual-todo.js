@@ -1,10 +1,21 @@
-export function showTask(){
-    let btnplus=document.querySelector(".plus")
-    let modal=document.querySelector(".dialog")
-    let close=document.querySelector(".close")
-
-    btnplus.addEventListener("click",()=>{
-        modal.showModal()
-        
-    })
+export function showTask() {
+  const plus = document.querySelector(".plus");
+  const dialog = document.querySelector("dialog");
+  const close = document.querySelector(".close");
+  const form = document.querySelector("form");
+  const submit = document.querySelector(".submit");
+  plus.addEventListener("click", (e) => {
+    dialog.showModal();
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  });
+  close.addEventListener("click", (e) => {
+    form.reset();
+    dialog.close();
+  });
+  submit.addEventListener("click", (e) => {
+    form.reset();
+    dialog.close();
+  });
 }
